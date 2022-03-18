@@ -4,6 +4,7 @@
     "api": "apps/api",
     "database": "libs/database",
     "pwa": "apps/pwa",
-    "pwa-e2e": "apps/pwa-e2e"
+    "pwa-e2e": "apps/pwa-e2e",
+    "users": "libs/users"
   }
 }

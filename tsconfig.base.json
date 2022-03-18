@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@playground/database": ["libs/database/src/index.ts"]
+      "@playground/database": ["libs/database/src/index.ts"],
+      "@playground/users": ["libs/users/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

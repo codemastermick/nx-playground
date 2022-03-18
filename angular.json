@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "api": "apps/api",
     "pwa": "apps/pwa",
     "pwa-e2e": "apps/pwa-e2e"
   }

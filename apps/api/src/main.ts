@@ -14,6 +14,7 @@ async function bootstrap() {
     type: VersioningType.URI,
     defaultVersion: '1',
   });
+  app.enableCors();
   app.use(helmet());
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);

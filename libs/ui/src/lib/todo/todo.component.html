@@ -1,7 +1,10 @@
 <div *ngIf="todo; else loading">
   <span hidden>{{ todo.id }}</span>
+  <input type="checkbox" [(ngModel)]="todo.done" />
   <span *ngIf="!editingContents" (click)="toggleEdit()">
-    {{ todo.contents }}
+    <span [ngClass]="todo.done ? 'done' : 'incomplete'">
+      {{ todo.contents }}
+    </span>
   </span>
   <input
     #contentInput
@@ -11,7 +14,6 @@
     (change)="toggleEdit()"
     (focusout)="editingContents = false"
   />
-  <input type="checkbox" [(ngModel)]="todo.done" />
 </div>
 
 <ng-template #loading> Loading item... </ng-template>

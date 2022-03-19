@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { ITodo } from '@playground/todos';
 
 @Component({
@@ -10,6 +10,8 @@ export class TodoComponent {
   @Input()
   todo?: ITodo;
   editingContents: boolean;
+  @ViewChild('contentInput')
+  inputEl!: ElementRef;
 
   constructor() {
     this.todo = undefined;
@@ -18,5 +20,10 @@ export class TodoComponent {
 
   toggleEdit() {
     this.editingContents = !this.editingContents;
+    if (this.editingContents) {
+      setTimeout(() => {
+        this.inputEl.nativeElement.focus();
+      }, 100);
+    }
   }
 }

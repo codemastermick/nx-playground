@@ -4,10 +4,12 @@
     {{ todo.contents }}
   </span>
   <input
+    #contentInput
     *ngIf="editingContents"
     type="text"
     [(ngModel)]="todo.contents"
     (change)="toggleEdit()"
+    (focusout)="toggleEdit()"
   />
   <input type="checkbox" [(ngModel)]="todo.done" />
 </div>

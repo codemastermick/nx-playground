@@ -17,6 +17,7 @@
     "paths": {
       "@playground/database": ["libs/database/src/index.ts"],
       "@playground/todos": ["libs/todos/src/index.ts"],
+      "@playground/ui": ["libs/ui/src/index.ts"],
       "@playground/users": ["libs/users/src/index.ts"]
     }
   },

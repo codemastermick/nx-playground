@@ -6,6 +6,7 @@
     "pwa": "apps/pwa",
     "pwa-e2e": "apps/pwa-e2e",
     "todos": "libs/todos",
+    "ui": "libs/ui",
     "users": "libs/users"
   }
 }

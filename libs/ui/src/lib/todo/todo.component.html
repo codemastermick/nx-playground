@@ -1,0 +1,14 @@
+<div *ngIf="todo; else loading">
+  <span [hidden]="editingContents" (click)="toggleEdit()">
+    {{ todo.contents }}
+  </span>
+  <input
+    type="text"
+    [(ngModel)]="todo.contents"
+    [hidden]="!editingContents"
+    (change)="updateContents()"
+  />
+  <input type="checkbox" [(ngModel)]="todo.done" (click)="toggleDone()" />
+</div>
+
+<ng-template #loading> Loading... </ng-template>

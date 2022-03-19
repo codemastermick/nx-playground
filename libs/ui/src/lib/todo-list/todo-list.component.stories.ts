@@ -49,7 +49,6 @@ const Template: Story<TodoListComponent> = (args: TodoListComponent) => ({
   props: args,
 });
 
-const emptyList: Todo[] = [];
 const dummyList: Todo[] = [];
 for (let i = 0; i < 10; i++) {
   dummyList.push({

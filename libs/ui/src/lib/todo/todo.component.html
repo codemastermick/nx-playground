@@ -9,7 +9,7 @@
     type="text"
     [(ngModel)]="todo.contents"
     (change)="toggleEdit()"
-    (focusout)="toggleEdit()"
+    (focusout)="editingContents = false"
   />
   <input type="checkbox" [(ngModel)]="todo.done" />
 </div>

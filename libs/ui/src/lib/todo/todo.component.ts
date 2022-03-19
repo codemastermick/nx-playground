@@ -7,8 +7,14 @@ import { ITodo } from '@playground/todos';
   styleUrls: ['./todo.component.scss'],
 })
 export class TodoComponent {
+  /**
+  The todo item being displayed by this component
+  */
   @Input()
   todo?: ITodo;
+  /**
+  Whether the contents of the Todo item are being edited or not
+  */
   editingContents: boolean;
 
   constructor() {
@@ -16,6 +22,9 @@ export class TodoComponent {
     this.editingContents = false;
   }
 
+  /**
+  Toggles the editing mode on or off, assigning focus to the input field
+  */
   toggleEdit() {
     setTimeout(() => {
       this.editingContents = !this.editingContents;

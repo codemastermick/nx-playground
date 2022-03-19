@@ -10,6 +10,20 @@ export default {
       handles: ['mouseover', 'change', 'click', 'focusout'],
     },
   },
+  argTypes: {
+    todo: {
+      name: 'todo',
+      description: 'The todo item being displayed by this component',
+      defaultValue: undefined,
+    },
+    editingContents: {
+      name: 'editingContents',
+      description:
+        'An internal boolean value used by the component to determine the visibility of the input field',
+      type: 'boolean',
+      defaultValue: false,
+    },
+  },
   decorators: [
     moduleMetadata({
       imports: [FormsModule],

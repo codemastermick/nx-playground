@@ -3,7 +3,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { TodoComponent } from './todo.component';
 
 export default {
-  title: 'TodoComponent',
+  title: 'Todos/Todo Item',
   component: TodoComponent,
   parameters: {
     actions: {

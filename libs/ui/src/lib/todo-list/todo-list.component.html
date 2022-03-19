@@ -1,0 +1,22 @@
+<span class="toolbar">
+  <input type="checkbox" [(ngModel)]="hideCompleted" id="hideComplete" />
+  <label for="hideComplete">Hide Completed Items</label>
+  <span class="spacer"></span>
+  <button (click)="removeCompleted()">Delete Completed</button>
+</span>
+
+<div *ngIf="todos.length > 0; else none">
+  <div class="todos" *ngFor="let todo of todos">
+    <playground-todo
+      [todo]="todo"
+      [hidden]="hideCompleted && todo.done"
+    ></playground-todo>
+  </div>
+</div>
+
+<ng-template #none>
+  <p>No todos found! Create a new one below &darr;</p>
+</ng-template>
+
+<label for="newItem">Create new todo:</label>
+<input type="text" [(ngModel)]="newItem" (change)="addItem()" id="newItem" />

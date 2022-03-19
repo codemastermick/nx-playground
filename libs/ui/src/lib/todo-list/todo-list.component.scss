@@ -1,0 +1,15 @@
+.toolbar {
+  display: flex;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.todos {
+  padding: 0.2em 0 0.2em 0.5em;
+}
+
+#newItem {
+  margin-top: 1em;
+}

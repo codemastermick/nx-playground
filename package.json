@@ -51,6 +51,7 @@
     "@nrwl/storybook": "13.9.0-beta.3",
     "@nrwl/workspace": "13.9.0-beta.3",
     "@prisma/client": "^3.11.0",
+    "@storybook/addon-a11y": "^6.4.19",
     "@storybook/addon-essentials": "~6.4.12",
     "@storybook/angular": "~6.4.12",
     "@storybook/builder-webpack5": "~6.4.12",

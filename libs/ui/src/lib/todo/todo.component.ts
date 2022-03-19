@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Todo } from '@playground/todos';
+import { ITodo } from '@playground/todos';
 
 @Component({
   selector: 'playground-todo',
@@ -8,26 +8,15 @@ import { Todo } from '@playground/todos';
 })
 export class TodoComponent {
   @Input()
-  todo?: Todo;
+  todo?: ITodo;
   editingContents: boolean;
 
   constructor() {
+    this.todo = undefined;
     this.editingContents = false;
   }
 
   toggleEdit() {
     this.editingContents = !this.editingContents;
-  }
-
-  updateContents() {
-    if (this.todo) {
-      this.toggleEdit();
-    }
-  }
-
-  toggleDone() {
-    if (this.todo) {
-      this.todo.done = !this.todo.done;
-    }
   }
 }

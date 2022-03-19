@@ -5,6 +5,11 @@ import { TodoComponent } from './todo.component';
 export default {
   title: 'TodoComponent',
   component: TodoComponent,
+  parameters: {
+    actions: {
+      handles: ['mouseover', 'change', 'click', 'focusout'],
+    },
+  },
   decorators: [
     moduleMetadata({
       imports: [FormsModule],

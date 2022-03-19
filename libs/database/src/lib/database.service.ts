@@ -7,10 +7,14 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
   users: Prisma.UserDelegate<
     Prisma.RejectOnNotFound | Prisma.RejectPerOperation
   >;
+  todos: Prisma.TodoDelegate<
+    Prisma.RejectOnNotFound | Prisma.RejectPerOperation
+  >;
 
   constructor() {
     this.client = new PrismaClient();
     this.users = this.client.user;
+    this.todos = this.client.todo;
   }
   async onModuleInit() {
     await this.client.$connect();

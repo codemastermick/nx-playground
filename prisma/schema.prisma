@@ -17,3 +17,9 @@ model User {
   password  String
   avatarURL String
 }
+
+model Todo {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  contents String
+  done     Boolean
+}
